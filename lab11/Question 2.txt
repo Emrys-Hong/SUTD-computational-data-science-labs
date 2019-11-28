@@ -1,0 +1,14 @@
+This is a character generation task. In this task, we take 50 characters as input and predict the next character. Use an LSTM network to do this. You can just use Bag of Character representation to represent a sequence. For example if in your vocabulary, you have these five characters {"I","S","M","J","A"," "} then you first assign index to these characters i.e.,
+("I":1, "S":2, "M":3, "J":4, "A":5," ":6). Now say, your input is I am SJ, you can convert this sequence of characters to sequence of integers i.e., [1, 6, 5, 3, 2, 4]. 
+
+Please follow the steps below to complete the task -
+
+1. Load in dataset of sample text and some preprocessing (convert to lowercase). Just read first 4000 lines so that each epoch takes less time to complete.
+2. Write fuctions for mapping characters to integers and vice versa. Our text generation task will generate character-by-character.
+3. Prepare dataset and labels for our training process, where we use sequences of 50 characters to generate the 51st character. Keras requries input to be in the shape [samples, time steps, features].
+4. Construct and train the LSTM model. Use large batch size to train faster.
+5. Generate a new text based on this seed text - "out of grief and impatience. answer'd neglectingly"
+
+Then answer this - how can we improve the generation?
+
+

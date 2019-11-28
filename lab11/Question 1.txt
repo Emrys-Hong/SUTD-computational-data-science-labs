@@ -1,0 +1,13 @@
+1. Use LSTM instead of SimpleRNN
+2. In different layers, use dropout with different dropout probabilities. See Dropout(p) in Keras. Report your observations considering the following factors - the effect of using the dropout layer at different layers, among these sets of dropout values [0.1,0.2,0.5,0.8,1]. which dropout value gave you the best result and why?
+
+keras.layers.Dropout(rate, noise_shape=None, seed=None)
+Applies Dropout to the input.
+
+Dropout consists of randomly setting a fraction rate of input units to 0 at each update during training time, which helps prevent overfitting.
+
+Arguments
+
+rate: float between 0 and 1. The fraction of the input units to drop.
+noise_shape: 1D integer tensor representing the shape of the binary dropout mask that will be multiplied with the input. For instance, if your inputs have the shape (batch_size, timesteps, features) and you want the dropout mask to be the same for all timesteps, you can use noise_shape=(batch_size, 1, features).
+seed: A Python integer to use as a random seed.

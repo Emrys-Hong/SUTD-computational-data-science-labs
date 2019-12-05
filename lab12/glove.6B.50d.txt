@@ -1,0 +1,1 @@
+/home/pengfei/data/glove-embeddings/glove.6B.50d.txt
